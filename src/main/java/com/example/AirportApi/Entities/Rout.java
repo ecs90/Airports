@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Rout {
+public class Rout { //Falta editar el @Basic de from/toAp por @OneToOne, @OneToMany o el que sea
     @Id
     @GeneratedValue
     private int id;

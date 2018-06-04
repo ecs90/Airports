@@ -1,18 +1,15 @@
 package com.example.AirportApi.Entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Flight {
     @Id
     @GeneratedValue
     private int id;
-    @Basic
+    @OneToMany
     private Rout rout;
-    @Basic
+    @OneToMany
     private Cabine cabine;
     @Basic
     private float price;

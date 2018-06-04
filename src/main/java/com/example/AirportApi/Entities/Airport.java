@@ -1,9 +1,6 @@
 package com.example.AirportApi.Entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Airport {
@@ -12,7 +9,7 @@ public class Airport {
     private int id;
     @Basic
     private String name;
-    @Basic
+    @ManyToOne
     private City city;
     @Basic
     private float latitude;
