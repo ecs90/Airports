@@ -1,12 +1,15 @@
 package com.example.AirportApi.Entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class Airport {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
     @Basic
     private String name;
     @ManyToOne
@@ -16,7 +19,7 @@ public class Airport {
     @Basic
     private float longitude;
 
-    public Airport(int id, String name, City city, float latitude, float longitude) {
+    public Airport(Long id, String name, City city, float latitude, float longitude) {
         this.id = id;
         this.name = name;
         this.city = city;
@@ -24,43 +27,4 @@ public class Airport {
         this.longitude = longitude;
     }
 
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public City getCity() {
-        return this.city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public float getLatitude() {
-        return this.latitude;
-    }
-
-    public void setLatitude(float latitude) {
-        this.latitude = latitude;
-    }
-
-    public float getLongitude() {
-        return this.longitude;
-    }
-
-    public void setLongitude(float longitude) {
-        this.longitude = longitude;
-    }
 }
