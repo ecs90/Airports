@@ -6,7 +6,12 @@
 	<groupId>com.example</groupId>
 	<artifactId>AirportApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>common</module>
+		<module>backend</module>
+		<module>bff</module>
+	</modules>
+    <packaging>pom</packaging>
 
 	<name>AirportApi</name>
 	<description>Demo project for Spring Boot</description>
